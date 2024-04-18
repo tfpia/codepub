@@ -14,7 +14,7 @@ First, run the following command in the terminal (make sure the path you see in 
 npm install
 ```
 
-to install all the additional libaries we need. They are defined in the [package.json file](./package.json)
+to install all the additional libraries we need. They are defined in the [package.json file](./package.json)
 
 ```bash
 npm run dev
@@ -25,6 +25,26 @@ This will start your application. Your terminal will show you on which port the 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the landing page of the application.
 
 🌟 Find the instructions on the app and youre all ready to start coding 🌟
+
+## Getting Started with Sandbox
+
+Navigate to [https://codesandbox.io/p/devbox/codepub-rp8p8p](https://codesandbox.io/p/devbox/codepub-rp8p8p)
+
+In order to work with the sandbox you need to create an account. Once you have created an account and you're logged in you can start editing files, codesandbox will automatically create a copy in your space.
+
+If you don't see the web application on the right side, you'll need to open the terminal inside of the sandbox and run the following commands:
+
+```bash
+npm install
+```
+
+to install all the additional libraries we need. They are defined in the [package.json file](./package.json)
+
+```bash
+npm run dev
+```
+
+This will start your application. Your terminal will show you on which port the application is started and a link where you can access it in the browser of sandbox.
 
 ## Navigate in the Project
 
