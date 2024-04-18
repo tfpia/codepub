@@ -61,6 +61,7 @@ export default function Visualisation() {
     return () => controller.abort()
   }, [selectedYear])
 
+  console.log("Data retrieved", data)
   // Hint: this is the point where the data is loaded before it gets passed into the components 🚚
   return (
     <CalendarLayout>
