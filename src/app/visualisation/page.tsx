@@ -12,7 +12,7 @@ import {
   Calendar,
   ColorIndicator,
   IntroText,
-  Title,
+  TitleWithYearPicker
 } from "@/components/calendar-view"
 import { Month as MonthType } from "@/types"
 
@@ -29,7 +29,7 @@ export default function Visualisation() {
    * Remember, a console.log() is your compass in the coding wilderness.
    * Let's dive in!
    */
-  const [selectedYear, setSelectedYear] = useState(2023)
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear())
   // Hint: you can also use new Date().getFullYear() instead of 2023 to get the current year
   // => const [selectedYear, setSelectedYear] = useState(new Date().getFullYear())
   const [data, setData] = useState<MonthType[]>([])
@@ -66,7 +66,7 @@ export default function Visualisation() {
   return (
     <CalendarLayout>
       <CalendarTitle>
-        <Title selectedYear={selectedYear} />
+        <TitleWithYearPicker selectedYear={selectedYear} onYearChange={handleYearChange}/>
         <IntroText>
           Dive into your financial journey with a visual calendar that
           color-codes each day according to your saving. Light greens show lower
