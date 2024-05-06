@@ -15,10 +15,12 @@ export const Month: React.FC<MonthProps> = ({ monthData }) => {
    * If you want to use different background colors, check the colors defined in tailwind.config.js.
    * Give it a try! Change bg-white to bg-purple and see what happens.
    */
-  const { month, weeks } = monthData
+  const { month, weeks, totalValue, averageValue } = monthData
   return (
     <div className="bg-white shadow rounded-lg p-4">
       <MonthHeader currentMonth={new Date(2020, month)} />
+      <p className="text-center">Total savings this month: €{totalValue}</p>
+      <p className="text-center mb-4">Average savings per day: €{Math.round(averageValue)}</p>
       <WeekdaysHeader />
       {weeks.map((week: any, index: any) => (
         <Week key={index} week={week} />
