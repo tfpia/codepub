@@ -5,7 +5,7 @@ import { DataMap, HabitData, Month, Week } from "@/types"
 // An array (also known as a list) of strings, representing the days of the week.
 // Arrays are a way to store multiple values in a single variable.
 // These are the days of the week, used later to match dates with days:
-export const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+export const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 // Another array, this time of emojis, each representing a month of the year.
 // Emojis representing each month (starting with January), adding a fun visual element to your data.
@@ -70,9 +70,14 @@ const generateWeeksForMonth = (
        * We want to shift it to the following: [Mon = 0, Tue = 1, Wed = 2, Thu = 3, Fri = 4, Sat = 5, Sun = 6]
        */
       let startDayOfWeekIndexMonday
+      if (startDayOfWeekIndex === 0) {
+        startDayOfWeekIndexMonday = 6
+      } else {
+        startDayOfWeekIndexMonday = startDayOfWeekIndex - 1
+      }
 
       // Use a loop (for-loop) to add placeholder days to the week until we reach the actual start day of the month:
-      for (let i = 0; i < startDayOfWeekIndex; i++) {
+      for (let i = 0; i < startDayOfWeekIndexMonday; i++) {
         week.push({ date: null, value: 0 })
       }
     }
